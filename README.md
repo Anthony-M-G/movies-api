@@ -4,14 +4,14 @@ This is a RESTful API for managing a movie database, developed with Node.js, Exp
 
 ## Technologies Used
 
-- **Node.js**: JavaScript runtime environment.
-- **Express.js**: Web framework for building the API.
-- **JavaScript**: Main programming language.
-- **Nodemon**: Tool for automatically restarting the server during development.
-- **Zod**: Library for schema validation.
-- **PostgreSQL**: Relational database management system.
-- **Morgan**: HTTP request logger middleware.
-- **Swagger**: Tool for API documentation.
+- Node.js: JavaScript runtime environment.
+- Express.js: Web framework for building the API.
+- JavaScript: Main programming language.
+- Nodemon: Tool for automatically restarting the server during development.
+- Zod: Library for schema validation.
+- PostgreSQL: Relational database management system.
+- Morgan: HTTP request logger middleware.
+- Swagger: Tool for API documentation.
 
 ## Prerequisites
 
@@ -31,14 +31,15 @@ Install dependencies:
 ### npm install
 Set up environment variables:
 Create a .env file at the root of the project with the following variables:
+<ul>
+<li>DB_HOST=your_database_host</li>
+<li>DB_USER=your_database_user</li>
+<li>DB_PASSWORD=your_database_password</li>
+<li>DB_NAME=your_database_name</li>
+<li>DB_PORT=your_database_port</li>
+</ul>
 
-**DB_HOST=your_database_host**
-**DB_USER=your_database_user**
-**DB_PASSWORD=your_database_password**
-**DB_NAME=your_database_name**
-**DB_PORT=your_database_port**
-
-Database Setup
+## Database Setup
 
 Install PostgreSQL: If PostgreSQL is not installed, download and install it from the official PostgreSQL website.
 
@@ -73,6 +74,7 @@ Use the pg library to connect to the PostgreSQL database. Here's an example conf
 
 const { Pool } = require('pg');
 const pool = new Pool({
+
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
