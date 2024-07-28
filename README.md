@@ -32,12 +32,14 @@ Install dependencies:
 Set up environment variables:
 Create a .env file at the root of the project with the following variables:
 
-DB_HOST=your_database_host
-DB_USER=your_database_user
-DB_PASSWORD=your_database_password
-DB_NAME=your_database_name
-DB_PORT=your_database_port
+**DB_HOST=your_database_host**
+**DB_USER=your_database_user**
+**DB_PASSWORD=your_database_password**
+**DB_NAME=your_database_name**
+**DB_PORT=your_database_port**
+
 Database Setup
+
 Install PostgreSQL: If PostgreSQL is not installed, download and install it from the official PostgreSQL website.
 
 ### Create a Database:
@@ -103,7 +105,7 @@ Add a new movie: POST /movies/add-movie
 
 Update a movie by ID: PUT /movies/update-movie/:id
 
-Documentation
+## Documentation
 
 API documentation is available at /api-docs using Swagger. Visit http://localhost:YOUR_PORT/api-docs to view the interactive documentation and test the routes.
 
