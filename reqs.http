@@ -1,0 +1,15 @@
+GET http://localhost:3001/movies
+Accept: application/json
+
+###
+POST http://localhost:3001/movies/add-movie/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Wolverine",
+    "director": "DC",
+    "release_year": 2005,
+    "genre": [ "Fantasy" ],
+    "rating": 7.8
+}
