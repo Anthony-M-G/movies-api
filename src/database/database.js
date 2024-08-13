@@ -1,13 +1,13 @@
 import pg from 'pg'
-
+import dotenv from 'dotenv'
+dotenv.config()
 const { Pool } = pg
 
 const pool = new Pool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+  connectionString: process.env.DB_CONNECTION_STRING,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
 const query = async (query, data) => {
   try {
@@ -19,5 +19,7 @@ const query = async (query, data) => {
     return null
   }
 }
+
+console.log(process.env.DB_CONNECTION_STRING)
 
 export default query
